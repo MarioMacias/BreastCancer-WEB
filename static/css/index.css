@@ -3,10 +3,27 @@
     padding: 0px;
 }
 body{
-    background: #654ea3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background: #642B73;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
 }
 
 header nav .container-fluid .navbar-brand{ color: whitesmoke; font-size: 2em;}
-#navbarNav a{color: whitesmoke; font-size: 1.5em;}
+header #navbarNav a{color: whitesmoke; font-size: 1.5em;}
+
+main .formulario{position: relative; margin-bottom: 20px;}
+main .formulario .bg-formulario{background-color: rgba(238, 191, 238, 0.8); border-radius: 60px; padding-bottom: 50px;}
+main .formulario .bg-formulario .text-form{padding: 20px;}
+main .formulario .bg-formulario .text-form h1{text-align: center;}
+main .formulario .bg-formulario .text-form h2{font-size: 1.6em;}
+
+#panel1{display: block;}
+#panel2{display: none;}
+
+main .formulario .bg-formulario .form .pregunta{margin: 20px auto;}
+main .formulario .bg-formulario .form .pregunta .form-floating input{background-color: rgb(238, 191, 238);}
+
+main .formulario .bg-formulario .form .pregunta .form-check{font-size: 1.1em; margin-top: 15px;}
+main .botones{text-align: center; margin-top: 30px;}
+main .botones i{font-size: 3.5em; color: #672C73;}
+main .botones i:hover{color: #C6426E;}
