@@ -1,6 +1,19 @@
+addEventListener('DOMContentLoaded', () =>{
+    const btn_menu = document.querySelector('.btn_menu')
+    if(btn_menu){
+        btn_menu.addEventListener('click', () => {
+            const menu_items = document.querySelector('.menu_items')
+            menu_items.classList.toggle('muestra')
+        })
+    }
+})
+
 var numPanel = 1;
+var totalPanel = 2;
 
 function siguienteForm(){
+    if(numPanel == totalPanel) return;
+    
     var panelActual = "panel"+numPanel;
     var panelSiguiente = "panel";
     var panelA = document.getElementById(panelActual);
@@ -13,6 +26,8 @@ function siguienteForm(){
 }
 
 function anteriorForm(){
+    if(numPanel == 1) return;
+
     var panelActual = "panel"+numPanel;
     var panelSiguiente = "panel";
     var panelA = document.getElementById(panelActual);
