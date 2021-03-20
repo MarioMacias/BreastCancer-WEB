@@ -8,6 +8,12 @@ addEventListener('DOMContentLoaded', () =>{
     }
 })
 
+var bg =document.querySelector('#bg');
+window.addEventListener('scroll',function(){
+    var value = window.scrollY;
+    bg.style.backgroundSize = 300 + value*2+"px";
+})
+
 var numPanel = 1;
 var totalPanel = 2;
 

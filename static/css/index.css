@@ -38,3 +38,9 @@ main .formulario .bg-formulario .form .pregunta .form-check{font-size: 1.1em; ma
 main .botones{text-align: center; margin-top: 30px;}
 main .botones i{font-size: 3.5em; color: #672C73;}
 main .botones i:hover{color: #C6426E;}
+
+/*PRUEBA*/
+.back{width: 100%; height: 100%; background: #C6426E; position: absolute; top: 0; left: 0; object-fit: cover;}
+.inicio h1{height: 3000px;border: 1px solid red;}
+.banner{position: fixed; top: 0; left: 0;   width: 100%; height: 100vh;}
+.banner #bg{position: absolute;width: 100%; height: 100%; background: #fff url('../images/heart.svg');background-repeat: no-repeat;background-position: center;background-size: 300px; mix-blend-mode: screen;}
