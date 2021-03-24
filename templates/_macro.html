@@ -1,0 +1,24 @@
+{% macro preguntaText(field) %}
+<div class="pregunta">
+    <h3 class="h3-pregunta"> {{ field.label }} </h3>
+    <div class="form-floating">
+        {{ field(**kwargs) |safe }}
+        <label for="floatingInputValue">{{ field.name }}</label>
+        
+    </div>
+</div>
+{% endmacro %}
+
+{% macro preguntaChecked(field) %}
+<div class="pregunta">
+    <h3 class="h3-pregunta">{{ field.label }}</h3>
+    <div class="form-check">
+        {% for subfield in field %}
+            <div class="form-check">
+                {{ subfield(**kwargs) |safe }}
+                {{ subfield.label }}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endmacro %}

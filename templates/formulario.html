@@ -1,3 +1,6 @@
+{% from "_macro.html" import preguntaChecked %}
+{% from "_macro.html" import preguntaText %}
+
 {% extends "layout.html"%}
 
 {% block content %}
@@ -11,90 +14,15 @@
         <!-- Form inicial -->
         <form id="form1" action="" method="post">
             <div class="form container" id="panel1">
-                <div class="pregunta">
-                    <h3 class="h3-pregunta">¿ Cuál es tu peso?</h3>
-                    <div class="form-floating">
-                        <input name="peso" type="text" class="form-control" id="floatingInputValue">
-                        <label for="floatingInputValue">Peso</label>
-                    </div>
-                </div>
-                <div class="pregunta">
-                    <h3 class="h3-pregunta">¿ Cuál es tu estatura?</h3>
-                    <div class="form-floating">
-                        <input name="estatura" type="text" class="form-control" id="floatingInputValue">
-                        <label for="floatingInputValue">Estatura</label>
-                    </div>
-                </div>
-                <div class="pregunta">
-                    <h3 class="h3-pregunta">¿Fumas?</h3>
-                    <div class="form-check">
-                        <div class="form-check">
-                            <input value="si-fuma" name="fuma" class="form-check-input" type="radio" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                              Si
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input value="no-fuma" name="fuma" class="form-check-input" type="radio" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                No
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="pregunta">
-                    <h3 class="h3-pregunta">¿Consumes bebidas alcohólicas?</h3>
-                    <div class="form-check">
-                        <div class="form-check">
-                            <input value="si-toma" name="toma" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                              Si
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input value="no-toma" name="toma" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                No
-                            </label>
-                        </div>
-                    </div>
-                </div>
+               {{ preguntaText(form.peso, class="form-control")}}
+               {{ preguntaText(form.estatura, class="form-control")}}
+            
+               {{ preguntaChecked(form.fuma, class="form-check-input")}}
+               {{ preguntaChecked(form.toma, class="form-check-input")}}
             </div>
         </form>
 
         <div class="form container" id="panel2">
-            <h1>{{ peso }}</h1>
-            <div class="pregunta">
-                <h3 class="h3-pregunta">2¿ Lorem, ipsum dolor. ?</h3>
-                <form class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputValue">
-                    <label for="floatingInputValue">Input with value</label>
-                </form>
-            </div>
-            <div class="pregunta">
-                <h3 class="h3-pregunta">2¿ Lorem, ipsum dolor. ?</h3>
-                <form class="form-floating">
-                    <input type="text" class="form-control" id="floatingInputValue">
-                    <label for="floatingInputValue">Input with value</label>
-                </form>
-            </div>
-            <div class="pregunta">
-                <h3 class="h3-pregunta">2 Lorem ipsum dolor sit amet.</h3>
-                <form class="form-check">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Default radio
-                        </label>
-                      </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Default checked radio
-                    </label>
-                    </div>
-                </form>
-            </div>
         </div>
 
         <hr>
