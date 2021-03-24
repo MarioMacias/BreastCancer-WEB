@@ -12,7 +12,7 @@ body{
 
 .menu{background-color: transparent; width: 100%; height: 75px;display: flex; align-items: center; justify-content: space-between;}
 .menu label{font-size: 30px; color: cornsilk; margin-left: 30px; font-weight: bolder;}
-.menu_items{display: flex; flex-direction: column; list-style: none; width: 100vw; height: calc(100% - 75px);position: fixed; top: -100vw; text-align: center;z-index: 8; transition: all .4s ease-in-out; border-radius: 10px; padding-left: 0px;}
+.menu_items{display: flex; flex-direction: column; list-style: none; width: 100vw; height: calc(100% - 75px);position: fixed; top: -1000vw; text-align: center;z-index: 8; transition: all .4s ease-in-out; border-radius: 10px; padding-left: 0px;}
 .menu_items li{line-height: 30px; color: black;display: block; flex-grow: 1; justify-content: center; padding-top: 50px; transition: all .5s ease-in-out;}
 .menu_items li a{color: black; font-weight: bolder; font-size: 2rem; text-decoration: none; transition: all .5s ease-in-out;}
 .menu_items li:hover{color: whitesmoke; background: rgba(243, 243, 243, 0.7);}
@@ -40,7 +40,15 @@ main .botones i{font-size: 3.5em; color: #672C73;}
 main .botones i:hover{color: #C6426E;}
 
 /*PRUEBA*/
-.back{width: 100%; height: 100%; background: #C6426E; position: absolute; top: 0; left: 0; object-fit: cover;}
-.inicio h1{height: 3000px;border: 1px solid red;}
+.back{width: 100%; height: 100%;  background: #C6426E; position: absolute; top: 0; left: 0; object-fit: cover;}
+.back .menu{text-align: center;height: 175px;}
+
+.back .bg-img{/* offset-x | offset-y | blur-radius | spread-radius | color */
+  border-radius: 20px; box-shadow: 12px 12px 12px 1px rgba(0, 0, 0, 0.2);margin: 0 auto; width: 300px; height: 270px;background-image: url('../images/lazo2.jpg'); background-size: cover; background-repeat: no-repeat;}
+
+.inicio{text-align: center; width: 100%; height: 2000px; position: absolute; color: #C6426E; padding: 20px;}
+.inicio h1{ text-align: center; width: 100%;}
+
+.inicio #titleBot{position: relative; top: 60vh;}
 .banner{position: fixed; top: 0; left: 0;   width: 100%; height: 100vh;}
 .banner #bg{position: absolute;width: 100%; height: 100%; background: #fff url('../images/heart.svg');background-repeat: no-repeat;background-position: center;background-size: 300px; mix-blend-mode: screen;}

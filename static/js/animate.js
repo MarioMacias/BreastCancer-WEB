@@ -17,7 +17,7 @@ window.addEventListener('scroll',function(){
 var numPanel = 1;
 var totalPanel = 2;
 
-function siguienteForm(){
+function siguienteForm(formActual){
     if(numPanel == totalPanel) return;
     
     var panelActual = "panel"+numPanel;
@@ -29,6 +29,9 @@ function siguienteForm(){
     
     panelA.style.display = "none";
     panelS.style.display = "block";
+
+    var form = "form" + formActual;
+    document.getElementById(form).submit();
 }
 
 function anteriorForm(){
