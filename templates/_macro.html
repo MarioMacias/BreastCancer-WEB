@@ -4,8 +4,10 @@
     <div class="form-floating">
         {{ field(**kwargs) |safe }}
         <label for="floatingInputValue">{{ field.name }}</label>
-        
     </div>
+    {% if field.errors %}
+        <p>{{ field.errors }}</p>
+    {% endif %}
 </div>
 {% endmacro %}
 
@@ -21,4 +23,8 @@
         {% endfor %}
     </div>
 </div>
+{% endmacro %}
+
+{% macro inputHidden(field)%}
+    {{ field(**kwargs) |safe }}
 {% endmacro %}

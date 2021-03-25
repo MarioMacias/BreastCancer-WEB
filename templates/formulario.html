@@ -1,9 +1,12 @@
 {% from "_macro.html" import preguntaChecked %}
 {% from "_macro.html" import preguntaText %}
+{% from "_macro.html" import inputHidden %}
 
 {% extends "layout.html"%}
 
 {% block content %}
+<input type="hidden" id="panelAct" value={{ panelAct }}>
+
 <div class="container formulario">
     <div class="container-fluid bg-formulario">
         <div class="text-form container">
@@ -12,27 +15,44 @@
         </div>
 
         <!-- Form inicial -->
-        <form id="form1" action="" method="post">
+        <form id="form1" action="{{ url_for( 'formulario') }}" method="post">
+            {{inputHidden(form.panel, value=1)}}
             <div class="form container" id="panel1">
+                {{ form.csrf_token }}
                {{ preguntaText(form.peso, class="form-control")}}
                {{ preguntaText(form.estatura, class="form-control")}}
             
                {{ preguntaChecked(form.fuma, class="form-check-input")}}
                {{ preguntaChecked(form.toma, class="form-check-input")}}
+
+               <button type="submit">sub</button>
             </div>
         </form>
 
-        <div class="form container" id="panel2">
-        </div>
+        <!-- Form 2 -->
+        <form id="form2" action="{{ url_for( 'formulario') }}" method="post">
+            {{inputHidden(form.panel, value=2)}}
+            <div class="form container" id="panel2">
+               {{ preguntaChecked(form.menopausia, class="form-check-input")}}
+               <button type="submit">sub</button>
+            </div>
+        </form>
+
+        <!-- Form 3 -->
+        <form id="form3" action="" method="post">
+            {{inputHidden(form.panel, value=3)}}
+            <div class="form container" id="panel3">
+               <p>panel3</p>
+            </div>
+        </form>
 
         <hr>
-        
         <!-- Botones -->
         <div class="botones container-fluid">
             <div class="row">
                 <div class="col"><i id="btn-left" class="fas fa-arrow-circle-left"  onclick="anteriorForm()"></i></div>
                 <div class="col"></div>
-                <div class="col"><i id="btn-right" class="fas fa-arrow-circle-right" onclick="siguienteForm('1')"></i></div>
+                <div class="col"><i id="btn-right" class="fas fa-arrow-circle-right" onclick="siguienteForm()"></i></div>
             </div>
         </div>
     </div>

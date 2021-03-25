@@ -8,42 +8,65 @@ addEventListener('DOMContentLoaded', () =>{
     }
 })
 
+addEventListener('DOMContentLoaded', () =>{
+    var numA = document.getElementById('panelAct').value;
+    // var numS = document.getElementById('panelSig').value;
+
+    var sPA = "panel"+numA;
+    // var sPS = "panel"+numS;
+    // alert(sPA);
+    // alert(sPS);
+    var panelActual = document.getElementById(sPA);
+    // var panelSiguiente = document.getElementById(sPS);
+
+    panelActual.style.display = "block";
+    //panelSiguiente.style.display = "block";
+})
+
 var bg =document.querySelector('#bg');
 window.addEventListener('scroll',function(){
     var value = window.scrollY;
     bg.style.backgroundSize = 300 + value*2+"px";
 })
 
-var numPanel = 1;
-var totalPanel = 2;
-
-function siguienteForm(formActual){
-    if(numPanel == totalPanel) return;
+function siguienteForm(){
+    // var panelA = document.getElementById(panelActual);
+    // numPanel++;
+    // panelSiguiente = panelSiguiente+numPanel;
+    // var panelS = document.getElementById(panelSiguiente);
     
-    var panelActual = "panel"+numPanel;
-    var panelSiguiente = "panel";
-    var panelA = document.getElementById(panelActual);
-    numPanel++;
-    panelSiguiente = panelSiguiente+numPanel;
-    var panelS = document.getElementById(panelSiguiente);
-    
-    panelA.style.display = "none";
-    panelS.style.display = "block";
+    // panelA.style.display = "none";
+    // panelS.style.display = "block";
 
-    var form = "form" + formActual;
+    // var form = "form" + formActual;
+    var numA = document.getElementById('panelAct').value;
+    var numS = document.getElementById('panelSig').value;
+
+    var sPA = "panel"+numA;
+    var sPS = "panel"+numS;
+    
+    var panelActual = document.getElementById(sPA);
+    var panelSiguiente = document.getElementById(sPS);
+
+    panelActual.style.display = "none";
+    panelSiguiente.style.display = "block";
+var p = "form" + numA;
+alert(p);
+    var form = document.getElementById(p);
+
     document.getElementById(form).submit();
 }
 
-function anteriorForm(){
-    if(numPanel == 1) return;
+// function anteriorForm(){
+//     if(numPanel == 1) return;
 
-    var panelActual = "panel"+numPanel;
-    var panelSiguiente = "panel";
-    var panelA = document.getElementById(panelActual);
-    numPanel--;
-    panelSiguiente = panelSiguiente+numPanel;
-    var panelS = document.getElementById(panelSiguiente);
+//     var panelActual = "panel"+numPanel;
+//     var panelSiguiente = "panel";
+//     var panelA = document.getElementById(panelActual);
+//     numPanel--;
+//     panelSiguiente = panelSiguiente+numPanel;
+//     var panelS = document.getElementById(panelSiguiente);
     
-    panelA.style.display = "none";
-    panelS.style.display = "block";
-}
+//     panelA.style.display = "none";
+//     panelS.style.display = "block";
+// }

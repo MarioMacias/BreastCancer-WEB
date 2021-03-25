@@ -28,8 +28,8 @@ main .formulario .bg-formulario .text-form{padding: 20px;}
 main .formulario .bg-formulario .text-form h1{text-align: center; color: cornsilk}
 main .formulario .bg-formulario .text-form h2{font-size: 1.6em;}
 
-#panel1{display: block;}
-#panel2{display: none;}
+#panel1{display: none;}
+#panel2, #panel3{display: none;}
 
 main .formulario .bg-formulario .form .pregunta{margin: 20px auto;}
 main .formulario .bg-formulario .form .pregunta .form-floating input{background-color: rgb(238, 191, 238);}
